@@ -9,7 +9,7 @@ use backend\models\Kurir;
 use yii\helpers\ArrayHelper;
 use kartik\widgets\ActiveForm;
 use kartik\widgets\DepDrop;
-use kartik\select2\select2;
+use kartik\select2\Select2;
 use yii\widgets\pjax;
 use common\components\GenerateComponent;
 use miloschuman\highcharts\Highcharts;
@@ -75,7 +75,7 @@ $this->title = 'My Yii Application';
           <tbody>
             <tr>
               <td>
-                  <?= $form->field($model2, 'KURIR')->widget(select2::classname(),[
+                  <?= $form->field($model2, 'KURIR')->widget(Select2::classname(),[
                       'data'=>ArrayHelper::map(Kurir::find()->all(),'ID','KURIRKATEGORI'),
                       'language'=>'en',
                       'options'=>['placeholder'=>'--Pilih Kurir--','id'=>'KURIR'],
